@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobTrack - Reminders</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dashboard-page">
+
+    <header class="dashboard-header">
+        <div class="brand-section">
+            <div class="brand-logo">💼</div>
+            <div class="brand-text">
+                <h1>JobTrack</h1>
+                <p>Stay on top of your next steps.</p>
+            </div>
+        </div>
+
+        <div class="header-actions">
+            <a href="dashboard.html" class="sidebar-link">Dashboard</a>
+            <button id="logoutButton" class="logout-button" type="button">
+                Logout
+            </button>
+        </div>
+    </header>
+
+    <div class="dashboard-layout">
+
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <h2>JobTrack</h2>
+                <p>Your career, organized.</p>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="sidebar-link">
+                    <span>▦</span> Dashboard
+                </a>
+                <a href="dashboard.html#applicationsList" class="sidebar-link">
+                    <span>▤</span> My Applications
+                </a>
+                <a href="add-job.html" class="sidebar-link">
+                    <span>＋</span> Add Application
+                </a>
+                <a href="dashboard.html#upcomingActivities" class="sidebar-link">
+                    <span>◷</span> Upcoming Interviews
+                </a>
+                <a href="reminders.html" class="sidebar-link active">
+                    <span>♧</span> Reminders
+                </a>
+                <a href="dashboard.html#analyticsSection" class="sidebar-link">
+                    <span>▥</span> Analytics
+                </a>
+                <a href="settings.html" class="sidebar-link">
+                    <span>⚙</span> Settings
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <p>Small steps lead to big dreams.</p>
+            </div>
+        </aside>
+
+        <main class="dashboard">
+
+            <section class="dashboard-intro">
+                <div>
+                    <h2>Reminders</h2>
+                    <p>Keep track of interviews and application follow-ups.</p>
+                </div>
+            </section>
+
+            <section class="reminders-grid">
+
+                <article class="reminder-panel">
+                    <div class="reminder-heading">
+                        <span class="reminder-icon">🎯</span>
+                        <div>
+                            <h2>Upcoming Interviews</h2>
+                            <p>Interviews scheduled for your applications.</p>
+                        </div>
+                    </div>
+                    <div id="reminderInterviews" class="reminder-list">
+                        <p>Loading interviews...</p>
+                    </div>
+                </article>
+
+                <article class="reminder-panel">
+                    <div class="reminder-heading">
+                        <span class="reminder-icon">📅</span>
+                        <div>
+                            <h2>Follow-ups</h2>
+                            <p>Applications that need your attention.</p>
+                        </div>
+                    </div>
+                    <div id="reminderFollowUps" class="reminder-list">
+                        <p>Loading follow-ups...</p>
+                    </div>
+                </article>
+
+            </section>
+
+            <p class="reminder-note">
+                These reminders are displayed in JobTrack when you open this page.
+                They do not send push notifications or emails.
+            </p>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

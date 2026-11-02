@@ -4,261 +4,416 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>JobTrack - Dashboard</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="dashboard-page">
 
-    <!-- ===============================
-         HEADER
-    ================================ -->
+    <div class="app-layout">
 
-    <header class="dashboard-header">
+        <!-- ===============================
+             1. LEFT SIDEBAR
+        ================================ -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <a href="dashboard.html" class="sidebar-logo">
+                    <div class="logo-icon-box">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="7" width="20" height="14" rx="3"/>
+                            <path d="M16 7V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v3"/>
+                            <path d="M2 12h20"/>
+                            <path d="M10 12v2h4v-2"/>
+                        </svg>
+                    </div>
+                    <span class="logo-text">JobTrack</span>
+                </a>
+            </div>
 
-        <div class="brand-section">
-            <h1>JobTrack</h1>
-            <p id="welcomeMessage">Welcome!</p>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-item active">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                        <polyline points="9 22 9 12 15 12 15 22"/>
+                    </svg>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="applications.html" class="nav-item">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14 2 14 8 20 8"/>
+                        <line x1="16" y1="13" x2="8" y2="13"/>
+                        <line x1="16" y1="17" x2="8" y2="17"/>
+                        <polyline points="10 9 9 9 8 9"/>
+                    </svg>
+                    <span>My Applications</span>
+                </a>
+
+                <a href="interviews.html" class="nav-item">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                        <line x1="16" y1="2" x2="16" y2="6"/>
+                        <line x1="8" y1="2" x2="8" y2="6"/>
+                        <line x1="3" y1="10" x2="21" y2="10"/>
+                    </svg>
+                    <span>Interviews</span>
+                </a>
+
+                <a href="analytics.html" class="nav-item">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="20" x2="18" y2="10"/>
+                        <line x1="12" y1="20" x2="12" y2="4"/>
+                        <line x1="6" y1="20" x2="6" y2="14"/>
+                    </svg>
+                    <span>Analytics</span>
+                </a>
+
+                <a href="settings.html" class="nav-item">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="3"/>
+                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                    </svg>
+                    <span>Settings</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-action-box" style="padding: 14px 10px 0;">
+                <button type="button" class="add-job-button" style="width: 100%; justify-content: center;" onclick="addNewJob()">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                        <line x1="12" y1="5" x2="12" y2="19"/>
+                        <line x1="5" y1="12" x2="19" y2="12"/>
+                    </svg>
+                    <span>+ Add Job</span>
+                </button>
+            </div>
+
+            <div class="sidebar-motivational-banner">
+                <div class="motivational-text-box">
+                    <p>Big dreams need a plan — and you have one.</p>
+                    <span class="heart-symbol">💙</span>
+                </div>
+                <div class="mountain-illustration" aria-hidden="true">
+                    <svg viewBox="0 0 180 90" width="100%" height="90" preserveAspectRatio="none" fill="none">
+                        <polygon points="0,90 45,35 90,90" fill="#c7d9fc" opacity="0.75"/>
+                        <polygon points="35,46 45,35 55,46 48,43 45,47 41,43" fill="#ffffff"/>
+                        <polygon points="50,90 110,18 170,90" fill="#9dbef8"/>
+                        <polygon points="98,34 110,18 122,34 115,29 110,34 105,29" fill="#ffffff"/>
+                        <polygon points="120,90 155,42 190,90" fill="#b9d2fa" opacity="0.85"/>
+                        <polygon points="147,53 155,42 163,53 158,50 155,54 152,50" fill="#ffffff"/>
+                        <line x1="110" y1="18" x2="110" y2="7" stroke="#2563eb" stroke-width="1.8"/>
+                        <polygon points="110,7 122,11 110,15" fill="#f59e0b"/>
+                    </svg>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ===============================
+             2. MAIN WRAPPER
+        ================================ -->
+        <div class="main-wrapper">
+
+            <!-- TOP COMPACT HEADER -->
+            <header class="top-header">
+                <div class="header-left">
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                            <line x1="3" y1="6" x2="21" y2="6"/>
+                            <line x1="3" y1="12" x2="21" y2="12"/>
+                            <line x1="3" y1="18" x2="21" y2="18"/>
+                        </svg>
+                    </button>
+                    <span id="welcomeMessage" class="visually-hidden"></span>
+                </div>
+
+                <div class="header-right">
+                    <button class="notification-button" type="button" aria-label="Notifications">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/>
+                            <path d="M10 21h4"/>
+                        </svg>
+                        <span class="notification-indicator"></span>
+                    </button>
+
+                    <div class="user-profile-menu">
+                        <div class="profile-avatar" id="headerUserAvatar">U</div>
+                        <span class="profile-user-name" id="headerUserName">User</span>
+                        <svg class="chevron-down" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                            <polyline points="6 9 12 15 18 9"/>
+                        </svg>
+                    </div>
+
+                    <button id="logoutButton" class="logout-link-btn" title="Logout" type="button">
+                        <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+                            <polyline points="16 17 21 12 16 7"/>
+                            <line x1="21" y1="12" x2="9" y2="12"/>
+                        </svg>
+                        <span>Logout</span>
+                    </button>
+                </div>
+            </header>
+
+            <!-- DASHBOARD BODY (2 COLUMNS: Center Dashboard + Right Column) -->
+            <div class="dashboard-body">
+
+                <!-- ===============================
+                     CENTER COLUMN
+                ================================ -->
+                <main class="center-content">
+
+                    <!-- A. WELCOME BANNER -->
+                    <section class="welcome-banner">
+                        <div class="welcome-text">
+                            <h1 id="welcomeGreeting">Hello, <span id="welcomeUserName">User</span>! 👋</h1>
+                            <p>Here's your complete job application tracker. Keep going — your next opportunity is closer than you think!</p>
+                        </div>
+                        <div class="welcome-illustration" aria-hidden="true">
+                            <svg viewBox="0 0 180 120" width="170" height="110" fill="none">
+                                <ellipse cx="90" cy="112" rx="75" ry="6" fill="#d9e6fa" opacity="0.6"/>
+                                <path d="M152 108v-14h16v14h-16z" fill="#93c5fd" rx="2"/>
+                                <path d="M160 94c-8-12-3-24 0-26 3 2 8 14 0 26z" fill="#34d399"/>
+                                <path d="M157 91c-10-8-10-18-6-21 1 3 10 11 6 21z" fill="#10b981"/>
+                                <path d="M163 91c10-8 10-18 6-21-1 3-10 11-6 21z" fill="#059669"/>
+                                <rect x="35" y="98" width="100" height="6" rx="3" fill="#cbd5e1"/>
+                                <polygon points="45,98 125,98 135,103 35,103" fill="#94a3b8"/>
+                                <rect x="42" y="24" width="86" height="74" rx="6" fill="#1e293b"/>
+                                <rect x="46" y="28" width="78" height="66" rx="3" fill="#eff6ff"/>
+                                <rect x="50" y="32" width="70" height="12" rx="2" fill="#dbeafe"/>
+                                <circle cx="58" cy="38" r="4" fill="#3b82f6"/>
+                                <rect x="65" y="35" width="30" height="3" rx="1.5" fill="#3b82f6"/>
+                                <rect x="65" y="40" width="20" height="2" rx="1" fill="#93c5fd"/>
+                                <rect x="50" y="48" width="46" height="4" rx="2" fill="#bfdbfe"/>
+                                <rect x="50" y="55" width="68" height="3" rx="1.5" fill="#cbd5e1"/>
+                                <rect x="50" y="61" width="62" height="3" rx="1.5" fill="#cbd5e1"/>
+                                <rect x="50" y="67" width="54" height="3" rx="1.5" fill="#cbd5e1"/>
+                                <rect x="50" y="75" width="32" height="14" rx="3" fill="#3b82f6"/>
+                                <rect x="85" y="75" width="32" height="14" rx="3" fill="#10b981"/>
+                            </svg>
+                        </div>
+                    </section>
+
+                    <!-- B. FIVE STATISTICS CARDS -->
+                    <section class="stats-grid">
+                        <div class="stat-card stat-total">
+                            <div class="stat-icon-box icon-blue">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                    <polyline points="14 2 14 8 20 8"/>
+                                    <line x1="16" y1="13" x2="8" y2="13"/>
+                                    <line x1="16" y1="17" x2="8" y2="17"/>
+                                </svg>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-title">Total Applications</span>
+                                <p class="stat-number" id="totalApplications">0</p>
+                            </div>
+                        </div>
+
+                        <div class="stat-card stat-applied">
+                            <div class="stat-icon-box icon-green">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                </svg>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-title">Applied</span>
+                                <p class="stat-number" id="appliedApplications">0</p>
+                            </div>
+                        </div>
+
+                        <div class="stat-card stat-interview">
+                            <div class="stat-icon-box icon-amber">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                    <line x1="16" y1="2" x2="16" y2="6"/>
+                                    <line x1="8" y1="2" x2="8" y2="6"/>
+                                    <line x1="3" y1="10" x2="21" y2="10"/>
+                                </svg>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-title">Interview</span>
+                                <p class="stat-number" id="interviewApplications">0</p>
+                            </div>
+                        </div>
+
+                        <div class="stat-card stat-selected">
+                            <div class="stat-icon-box icon-purple">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                                </svg>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-title">Selected</span>
+                                <p class="stat-number" id="selectedApplications">0</p>
+                            </div>
+                        </div>
+
+                        <div class="stat-card stat-rejected">
+                            <div class="stat-icon-box icon-rose">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <line x1="15" y1="9" x2="9" y2="15"/>
+                                    <line x1="9" y1="9" x2="15" y2="15"/>
+                                </svg>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-title">Rejected</span>
+                                <p class="stat-number" id="rejectedApplications">0</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- C. UPCOMING ACTION ITEMS (FOCUS ON UPCOMING ONLY) -->
+                    <section class="upcoming-focus-section">
+                        <div class="section-top-bar">
+                            <div>
+                                <h2 class="section-heading">Upcoming Activities & Action Items</h2>
+                                <p class="section-subtext">Stay on top of upcoming interviews and pending follow-ups without clutter.</p>
+                            </div>
+                            <div class="action-buttons-group">
+                                <a href="applications.html" class="history-link-btn" title="View Full Application History">
+                                    <span>View My Applications &rarr;</span>
+                                </a>
+                                <button type="button" class="add-job-button" onclick="addNewJob()" title="Add New Application">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                                        <line x1="12" y1="5" x2="12" y2="19"/>
+                                        <line x1="5" y1="12" x2="19" y2="12"/>
+                                    </svg>
+                                    <span>+ Add Job</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="upcoming-focus-grid">
+                            <!-- 1. Upcoming Interviews Focus Card -->
+                            <div class="focus-card">
+                                <div class="focus-card-header">
+                                    <div class="title-with-icon">
+                                        <div class="activity-header-icon" style="background: #fef3c7; color: #d97706;">
+                                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                                <line x1="16" y1="2" x2="16" y2="6"/>
+                                                <line x1="8" y1="2" x2="8" y2="6"/>
+                                                <line x1="3" y1="10" x2="21" y2="10"/>
+                                            </svg>
+                                        </div>
+                                        <h3>Upcoming Interviews</h3>
+                                    </div>
+                                    <a href="interviews.html" class="view-all-link">Manage Interviews &rarr;</a>
+                                </div>
+                                <div class="activity-list" id="dashboardFocusInterviews">
+                                    <!-- Populated dynamically by script.js -->
+                                </div>
+                            </div>
+
+                            <!-- 2. Upcoming Follow-ups Focus Card -->
+                            <div class="focus-card">
+                                <div class="focus-card-header">
+                                    <div class="title-with-icon">
+                                        <div class="activity-header-icon" style="background: #e0f2fe; color: #0284c7;">
+                                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                                                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                                                <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+                                            </svg>
+                                        </div>
+                                        <h3>Pending Follow-ups</h3>
+                                    </div>
+                                    <span class="focus-header-note">Active Applications</span>
+                                </div>
+                                <div class="activity-list" id="dashboardFocusFollowUps">
+                                    <!-- Populated dynamically by script.js -->
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- D. QUICK TIPS SECTION -->
+                    <section class="quick-tips-card">
+                        <div class="quick-tips-icon-box">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="9" y1="18" x2="15" y2="18"/>
+                                <line x1="10" y1="22" x2="14" y2="22"/>
+                                <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/>
+                            </svg>
+                        </div>
+                        <div class="quick-tips-body">
+                            <h4>Quick Tips</h4>
+                            <p>Keep your application details updated and don't forget to schedule follow-ups!</p>
+                        </div>
+                        <div class="quick-tips-pastel-wave" aria-hidden="true">
+                            <svg viewBox="0 0 160 80" width="150" height="70" fill="none">
+                                <path d="M0 60 C 40 20, 100 80, 160 30 L 160 80 L 0 80 Z" fill="#fef3c7" opacity="0.6"/>
+                                <path d="M30 70 C 70 30, 120 70, 160 50 L 160 80 L 30 80 Z" fill="#dbeafe" opacity="0.7"/>
+                            </svg>
+                        </div>
+                    </section>
+
+                </main>
+
+                <!-- ===============================
+                     RIGHT COLUMN
+                ================================ -->
+                <aside class="right-column">
+
+                    <!-- A. APPLICATION STATUS OVERVIEW (CHART) -->
+                    <div class="right-card chart-card" id="analyticsSection">
+                        <div class="card-header-clean">
+                            <h3>Application Status Overview</h3>
+                        </div>
+                        <div class="chart-content-layout">
+                            <div class="chart-canvas-wrapper">
+                                <canvas id="applicationStatusChart" role="img" aria-label="Doughnut chart of job applications by status"></canvas>
+                                <div class="chart-center-badge">
+                                    <span class="chart-center-number" id="chartCenterTotal">0</span>
+                                    <span class="chart-center-sub">Total</span>
+                                </div>
+                            </div>
+                            <div class="chart-legend-list" id="chartLegendList">
+                                <!-- Populated dynamically by script.js -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- B. MOTIVATIONAL ILLUSTRATION CARD -->
+                    <div class="right-card motivational-card">
+                        <div class="motivational-card-text">
+                            <h4>Good things take time!</h4>
+                            <span class="motivational-heart">💙</span>
+                        </div>
+                        <div class="motivational-rocket-illustration" aria-hidden="true">
+                            <svg viewBox="0 0 100 90" width="85" height="75" fill="none">
+                                <defs>
+                                    <linearGradient id="rocketBodyGrad" x1="20" y1="20" x2="80" y2="70" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#3b82f6"/>
+                                        <stop offset="1" stop-color="#8b5cf6"/>
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="15" cy="20" r="2" fill="#93c5fd"/>
+                                <circle cx="85" cy="15" r="1.5" fill="#c4b5fd"/>
+                                <circle cx="20" cy="65" r="1.5" fill="#93c5fd"/>
+                                <path d="M35 60 C 25 72, 28 85, 30 88 C 34 82, 45 78, 48 68 Z" fill="#f59e0b"/>
+                                <path d="M38 63 C 32 72, 34 80, 35 82 C 38 78, 43 75, 45 68 Z" fill="#ef4444"/>
+                                <path d="M42 42 L25 58 L38 62 Z" fill="#6366f1"/>
+                                <path d="M60 25 L75 42 L65 52 Z" fill="#6366f1"/>
+                                <path d="M40 60 C 35 45, 45 25, 75 12 C 78 40, 60 55, 45 62 Z" fill="url(#rocketBodyGrad)"/>
+                                <circle cx="56" cy="34" r="6" fill="#ffffff"/>
+                                <circle cx="56" cy="34" r="4" fill="#38bdf8"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                </aside>
+
+            </div>
+
         </div>
 
-        <button id="logoutButton" class="logout-button">
-            Logout
-        </button>
+    </div>
 
-    </header>
-
-
-    <!-- ===============================
-         MAIN DASHBOARD
-    ================================ -->
-
-    <main class="dashboard">
-
-        <!-- Introduction -->
-
-        <section class="dashboard-intro">
-
-            <div>
-                <h2>Job Application Dashboard</h2>
-
-                <p>
-                    Track, organize and manage your job applications
-                    in one place.
-                </p>
-            </div>
-
-        </section>
-
-
-        <!-- ===============================
-             STATISTICS
-        ================================ -->
-
-        <section class="stats-grid">
-
-            <div class="stat-card">
-
-                <div class="stat-icon">📋</div>
-
-                <div>
-                    <h3>Total Applications</h3>
-                    <p id="totalApplications">0</p>
-                </div>
-
-            </div>
-
-
-            <div class="stat-card">
-
-                <div class="stat-icon">📨</div>
-
-                <div>
-                    <h3>Applied</h3>
-                    <p id="appliedApplications">0</p>
-                </div>
-
-            </div>
-
-
-            <div class="stat-card">
-
-                <div class="stat-icon">🎯</div>
-
-                <div>
-                    <h3>Interviews</h3>
-                    <p id="interviewApplications">0</p>
-                </div>
-
-            </div>
-
-
-            <div class="stat-card">
-
-                <div class="stat-icon">🎉</div>
-
-                <div>
-                    <h3>Selected</h3>
-                    <p id="selectedApplications">0</p>
-                </div>
-
-            </div>
-
-
-            <div class="stat-card">
-
-                <div class="stat-icon">❌</div>
-
-                <div>
-                    <h3>Rejected</h3>
-                    <p id="rejectedApplications">0</p>
-                </div>
-
-            </div>
-
-        </section>
-
-        </section>
-
-
-        <!-- Upcoming Activities -->
-
-        <section class="upcoming-section">
-
-            <div class="section-header">
-
-                <div>
-                    <h2>Upcoming Activities</h2>
-
-                    <p>
-                        Keep track of your upcoming interviews and follow-ups.
-                    </p>
-                </div>
-
-            </div>
-
-            <div class="upcoming-grid">
-
-                <div class="upcoming-card">
-
-                    <div class="upcoming-icon">
-                        🎯
-                    </div>
-
-                    <div>
-                        <h3>Upcoming Interviews</h3>
-
-                        <p id="upcomingInterviews">
-                            No upcoming interviews.
-                        </p>
-                    </div>
-
-                </div>
-
-
-                <div class="upcoming-card">
-
-                    <div class="upcoming-icon">
-                        📅
-                    </div>
-
-                    <div>
-                        <h3>Upcoming Follow-ups</h3>
-
-                        <p id="upcomingFollowUps">
-                            No upcoming follow-ups.
-                        </p>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <section class="applications-section">
-
-        <!-- ===============================
-             APPLICATIONS
-        ================================ -->
-
-        <section class="applications-section">
-
-            <div class="section-header">
-
-                <div>
-                    <h2>My Applications</h2>
-
-                    <p>
-                        View and manage all your job applications.
-                    </p>
-                </div>
-
-            <button
-                class="add-job-button"
-                onclick="addNewJob()">
-
-                + Add Job
-
-            </button>
-
-            </div>
-
-
-            <!-- Search & Filter -->
-
-            <div class="application-filters">
-
-                <input
-                    type="text"
-                    id="searchApplications"
-                    placeholder="🔍 Search company or job title..."
-                >
-
-                <select id="filterStatus">
-
-                    <option value="All">
-                        All Status
-                    </option>
-
-                    <option value="Applied">
-                        Applied
-                    </option>
-
-                    <option value="Interview">
-                        Interview
-                    </option>
-
-                    <option value="Selected">
-                        Selected
-                    </option>
-
-                    <option value="Rejected">
-                        Rejected
-                    </option>
-
-                </select>
-
-            </div>
-
-
-            <!-- Applications -->
-
-            <div
-                id="applicationsList"
-                class="applications-list">
-
-                <!-- Applications will appear here -->
-
-            </div>
-
-        </section>
-
-    </main>
-
-
+    <!-- Chart.js and Main Script -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
 
 </body>

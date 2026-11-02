@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobTrack - Settings</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dashboard-page">
+
+    <header class="dashboard-header">
+        <div class="brand-section">
+            <div class="brand-logo">💼</div>
+            <div class="brand-text">
+                <h1>JobTrack</h1>
+                <p>Account Settings</p>
+            </div>
+        </div>
+
+        <div class="header-actions">
+            <a href="dashboard.html" class="sidebar-link">
+                Back to Dashboard
+            </a>
+            <button id="logoutButton" class="logout-button" type="button">
+                Logout
+            </button>
+        </div>
+    </header>
+
+    <div class="dashboard-layout">
+
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <h2>JobTrack</h2>
+                <p>Your career, organized.</p>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="sidebar-link">
+                    <span>▦</span> Dashboard
+                </a>
+                <a href="dashboard.html#applicationsList" class="sidebar-link">
+                    <span>▤</span> My Applications
+                </a>
+                <a href="add-job.html" class="sidebar-link">
+                    <span>＋</span> Add Application
+                </a>
+                <a href="dashboard.html#upcomingActivities" class="sidebar-link">
+                    <span>◷</span> Upcoming Interviews
+                </a>
+                <a href="reminders.html" class="sidebar-link">
+                    <span>♧</span> Reminders
+                </a>
+                <a href="dashboard.html#analyticsSection" class="sidebar-link">
+                    <span>▥</span> Analytics
+                </a>
+                <a href="settings.html" class="sidebar-link active">
+                    <span>⚙</span> Settings
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <p>Small steps lead to big dreams.</p>
+            </div>
+        </aside>
+
+        <main class="dashboard">
+
+            <section class="dashboard-intro">
+                <div>
+                    <h2>Settings</h2>
+                    <p>View your account information.</p>
+                </div>
+            </section>
+
+            <section class="applications-section settings-card">
+                <div class="section-header">
+                    <div>
+                        <h2>Profile Information</h2>
+                        <p>Your JobTrack account details.</p>
+                    </div>
+                </div>
+
+                <div class="settings-field">
+                    <label for="displayName">Display Name</label>
+                    <input
+                        type="text"
+                        id="displayName"
+                        placeholder="Loading name..."
+                        readonly
+                    >
+                </div>
+
+                <div class="settings-field">
+                    <label for="accountEmail">Account Email</label>
+                    <input
+                        type="email"
+                        id="accountEmail"
+                        placeholder="Loading email..."
+                        readonly
+                    >
+                </div>
+
+                <p class="settings-note">
+                    These details are read-only in this version of JobTrack.
+                </p>
+
+                <a href="dashboard.html" class="add-job-button settings-back">
+                    Back to Dashboard
+                </a>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
